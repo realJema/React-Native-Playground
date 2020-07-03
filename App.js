@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component, useState } from "react";
+import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from "react-native";
+
+import First from './Components/First';
+import Red from './Components/Red';
+import Blue from './Components/Blue';
+import Green from './Components/Green';
+import Horizontal from './Components/Horizontal';
+import Colors from './Components/Colors';
+import Login from './Components/Login';
 
 export default function App() {
+  const [text, setText] = useState("");
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Login />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  container: {},
 });
