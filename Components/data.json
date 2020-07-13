@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "title": "first Video",
+            "author": "realjema",
+            "image": "bg1.jpg",
+            "descr": "This is a video about you"
+        },
+        {
+            "title": "second Video",
+            "author": "debussy",
+            "image": "bg2.jpg",
+            "descr": "This is a video about you"
+        },
+        {
+            "title": "third Video",
+            "author": "rambo",
+            "image": "bg3.jpg",
+            "descr": "This is a video about you"
+        }
+    ]
+}
