@@ -62,9 +62,9 @@ export default class Politics extends Component {
         <ScrollView>
           {!this.state.loading ? (
             <FlatList
-              keyExtractor={(item) => item.id}
+              keyExtractor={(item) => item._id.toString()}
               data={this.state.posts}
-              renderItem={({ item }) => <Cards data={item} />}
+              renderItem={({ item }) => <Cards key={item._id} data={item} />}
             />
           ) : (
             <ActivityIndicator style={styles.loader} />

@@ -49,17 +49,15 @@ export default class News extends Component {
               <Text>
                 Our community tells real global stories about resistance,
                 justice and identity. We've curated, verified and translated
-                trending international news since 2005. 
+                trending international news since 2005.
               </Text>
             </View>
             <ScrollView>
               {!this.state.loading ? (
                 <FlatList
-                  keyExtractor={(item) => item.id}
-                  data={this.state.posts} 
-                  renderItem={({ item }) => (
-                    <Cards data={item} />
-                  )}
+                  keyExtractor={(item) => item._id.toString()}
+                  data={this.state.posts}
+                  renderItem={({ item }) => <Cards key={item._id} data={item} />}
                 />
               ) : (
                 <ActivityIndicator style={styles.loader} />
