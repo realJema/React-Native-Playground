@@ -1,0 +1,1 @@
+web: gunicorn flapi:app
