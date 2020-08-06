@@ -1,1 +1,1 @@
-web: gunicorn flapi:app
+web: npm start
