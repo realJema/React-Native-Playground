@@ -52,11 +52,11 @@ export default class World extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header_text}>
-          <Text style={styles.presentation}>Trending</Text>
+          <Text style={styles.presentation}>World News</Text>
           <Text>
-            Our community tells real global stories about resistance, justice
-            and identity. We've curated, verified and translated trending
-            international news since 2005.
+            World news or international news or even foreign coverage is the
+            news media jargon for news from abroad, about a country or a global
+            subject. For journalism,
           </Text>
         </View>
         <ScrollView>

@@ -52,11 +52,12 @@ export default class Politics extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header_text}>
-          <Text style={styles.presentation}>Trending</Text>
+          <Text style={styles.presentation}>Politics</Text>
           <Text>
-            Our community tells real global stories about resistance, justice
-            and identity. We've curated, verified and translated trending
-            international news since 2005.
+            Politics is a multifaceted word. It may be used positively in the
+            context of a "political solution" which is compromising and
+            non-violent,or descriptively as "the art or science of
+            government", but also often carries a negative connotatio
           </Text>
         </View>
         <ScrollView>
