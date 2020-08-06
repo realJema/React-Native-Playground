@@ -7,9 +7,7 @@ import Politics from './Politics';
 import World from './World';
 
 const NewsPage = () => (
-  // <News style={styles.scene} />
-
-  <Politics style={styles.scene} />
+  <News style={styles.scene} />
 );
 
 const PoliticsPage = () => (
@@ -17,8 +15,7 @@ const PoliticsPage = () => (
 );
 
 const WorldPage = () => (
-  // <World style={styles.scene} />
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
+  <World style={styles.scene} />
 );
  /* 
 const SecondRoute = () => (

@@ -17,15 +17,29 @@ export default class News extends Component {
         //Have a try and catch block for catching errors.
         try {
             //Assign the promise unresolved first then get the data using the json method. 
-          const news = await fetch('http://127.0.0.1:5000/native/api/news/data');
+            const news = await fetch(
+              "http://127.0.0.1:5000/native/api/news/data/filter",
+              {
+                method: "POST",
+                mode: "cors",
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                redirect: "follow",
+                referrerPolicy: "no-referrer",
+                body: JSON.stringify({ "category": "trending" }),
+              }
+          );
           const theNews = await news.json();
-          console.log('got data');
-          console.log(theNews);
-            this.setState({posts: theNews, loading: false});
+          var updateNews = this.state.posts.concat(theNews);
+          // console.log(updateNews);
+            this.setState({ posts: updateNews, loading: false });
         } catch(err) {
-            console.log("Error fetching data-----------", err);
+            console.log("Error fetching data-----------\n", err);
         }
-  };
+  }; 
     render() {
       
         return (
@@ -42,7 +56,7 @@ export default class News extends Component {
               {!this.state.loading ? (
                 <FlatList
                   keyExtractor={(item) => item.id}
-                  data={this.state.posts}
+                  data={this.state.posts} 
                   renderItem={({ item }) => (
                     <Cards data={item} />
                   )}
