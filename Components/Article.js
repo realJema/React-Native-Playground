@@ -72,6 +72,9 @@ export default class World extends Component {
                   }}
                 />
                 <Text style={styles.description}>
+                  {this.state.article.sub_title}
+                </Text>
+                <Text style={styles.description}>
                   {this.state.article.description}
                 </Text>
               </View>
