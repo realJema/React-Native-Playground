@@ -25,7 +25,7 @@ export default class World extends Component {
     try {
       //Assign the promise unresolved first then get the data using the json method.
       const news = await fetch(
-        "http://127.0.0.1:5000/native/api/news/data/filter",
+        "http://127.0.0.1:5000/native/api/news/filter",
         {
           method: "POST",
           mode: "cors",
