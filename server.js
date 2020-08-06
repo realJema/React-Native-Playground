@@ -16,9 +16,7 @@ const News = require("./models/news_posts");
 
 // Import the library:
 var cors = require('cors');
-
 const app = express();
-
 // Then use it before your routes are set up:
 app.use(cors());
 
@@ -29,6 +27,16 @@ app.use(cookieParser());
 // local database
 const mongo_uri = 'mongodb://localhost/nativenews';
 
+// function to get the time for every fetch 
+function getCurrentTime() {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date + ' ' + time;
+  return dateTime;
+};
+  
+  
 mongoose.connect(
   mongo_uri,
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -56,9 +64,9 @@ app.get('/native/api/news', function (req, res) {
   res.status(200).send("Welcome to the NATIVE News api!");
 });
 /*
-  Route: /native/api/finder/data
+  Route: /native/api/news/data
   Type: GET
-  Description: get the data for the finder project
+  Description: get the data for the nes app project
 */
 app.get('/native/api/news/data', function (req, res) {
   News.find(function (err, posts) {
@@ -72,19 +80,37 @@ app.get('/native/api/news/data', function (req, res) {
   });
 });
 /*
-  Route: /native/api/finder/data/category
+  Route: /native/api/news/filter
   Type: POST
-  Description: get the data for the finder project
+  Description: get the data for the news app project
 */
-app.post('/native/api/news/data/filter', function (req, res) {
-  var cat = req.body.category;
-  News.find({ category: cat }, function (err, posts) {
+app.post('/native/api/news/filter', function (req, res) {
+  var value = req.body.category;
+  News.find({ category: value }, function (err, posts) {
     if (err) {
       res.status(401).send("Internal Server Error");
     } else {
       // sending all the jobs fetch from the database
         
-      console.log("[/native/api/news/data/filter] - Filtered Data fetched");
+      console.log("["+ getCurrentTime() + "] - Filtered Data fetched");
+      res.status(200).send(posts);
+    }
+  });
+});
+/*
+  Route: /native/api/news/article
+  Type: POST
+  Description: get the data for a single article 
+*/
+app.post('/native/api/news/article', function (req, res) {
+  var value = req.body.articleID;
+  News.findOne({ _id: value }, function (err, posts) {
+    if (err) {
+      res.status(401).send("Internal Server Error");
+    } else {
+      // sending all the jobs fetch from the database
+        
+      console.log("["+ getCurrentTime() + "] - Article Data fetched");
       res.status(200).send(posts);
     }
   });

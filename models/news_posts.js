@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 // this will be our data base's data structure
 const Post = new Schema(
   {
-    id: Number,
     title: String,
     img: String,
     sub_title: String,

@@ -17,6 +17,34 @@ dataList = [
         "img": "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "sub_title": "This is a subtitle",
         "description": "This is my first post",
+        "category": "world",
+        "likes": 10,
+        "author": "@realjema",
+        "location": "yaounde",
+        "date": {
+            "day": 3,
+            "month": "August",
+        }
+    },
+    {
+        "title": "Title of the first post",
+        "img": "https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "sub_title": "This is a subtitle",
+        "description": "This is my first post",
+        "category": "trending",
+        "likes": 10,
+        "author": "@realjema",
+        "location": "yaounde",
+        "date": {
+            "day": 3,
+            "month": "August",
+        }
+    },
+    {
+        "title": "Title of the first post",
+        "img": "https://images.unsplash.com/photo-1596518997982-9b05a8758ab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "sub_title": "This is a subtitle",
+        "description": "This is my first post",
         "category": "politics",
         "likes": 10,
         "author": "@realjema",
@@ -25,7 +53,7 @@ dataList = [
             "day": 3,
             "month": "August",
         }
-    }
+    },
 ]
 
 # inserting into collection
