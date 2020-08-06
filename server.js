@@ -25,7 +25,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // local database
-const mongo_uri = 'mongodb://localhost/nativenews';
+// const mongo_uri = 'mongodb://localhost/nativenews';
+const mongo_uri =
+  "mongodb+srv://admin:neverSETTLE4anything!@nativenews.esbmn.mongodb.net/nativenews?retryWrites=true&w=majority";
 
 // function to get the time for every fetch 
 function getCurrentTime() {
