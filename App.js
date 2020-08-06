@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, ScrollView, View, FlatList, ActivityIndicator} from 'react-native';
+import { Router, Scene } from "react-native-router-flux";
 
 import TabViewExample from './Components/TabViewExample';
 
-import Header1 from "./Components/Header";
+import Home from "./Components/Home";
+import Article from "./Components/Article";
 
 export default function App() {
   return (
-    <View>
-      <Header1 />
-      <TabViewExample/>
-    </View>
+    <Router>
+      <Scene key="root">
+        <Scene key="home" component={Home} hideNavBar={true}/>
+        <Scene key="article" component={Article}  hideNavBar={true}/>
+      </Scene>
+    </Router>
   );
 }
 
