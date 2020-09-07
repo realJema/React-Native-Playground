@@ -17,7 +17,10 @@ export default function App() {
       </View>
       <View style={[styles.outer, { backgroundColor: "red" }]}>
         <View style={styles.textBlock}>
-          <Text style={styles.title}>RED</Text>
+          <View style={styles.heading}>
+              <Text style={styles.title}>RED</Text>
+              <Text style={styles.category}>PRIMARY</Text>
+          </View>
           <Text style={[styles.desc, { color: "white" }]}>
             The color of passion and drama. This color attracts the most
             attention and is associated with strong emotions such as love and
@@ -43,7 +46,10 @@ export default function App() {
       </View>
       <View style={[styles.outer, { backgroundColor: "yellow" }]}>
         <View style={styles.textBlock}>
-          <Text style={styles.title}>YELLOW</Text>
+          <View style={styles.heading}>
+              <Text style={styles.title}>YELLOW</Text>
+              <Text style={styles.category}>PRIMARY</Text>
+          </View>
           <Text style={styles.desc}>
             The color of optimism. Yellow is a compelling color that conveys
             youthful, fresh energy. This color of sunshine is uplifting and
@@ -67,7 +73,10 @@ export default function App() {
       </View>
       <View style={[styles.outer, { backgroundColor: "blue" }]}>
         <View style={styles.textBlock}>
-          <Text style={styles.title}>BLUE</Text>
+          <View style={styles.heading}>
+              <Text style={styles.title}>BLUE</Text>
+              <Text style={styles.category}>PRIMARY</Text>
+          </View>
           <Text style={[styles.desc, { color: "white" }]}>
             The color of trust. Blue, the shade of the sea and the sky, is
             thought to induce calm and convey tranquillity, serenity and peace.
@@ -79,7 +88,10 @@ export default function App() {
       </View>
       <View style={[styles.outer, { backgroundColor: "green" }]}>
         <View style={styles.textBlock}>
-          <Text style={styles.title}>GREEN</Text>
+          <View style={styles.heading}>
+              <Text style={styles.title}>GREEN</Text>
+              <Text style={styles.category}>SECONDARY</Text>
+          </View>
           <Text style={[styles.desc, { color: "white" }]}>
             The color of growth and health. Think of nature and see green in all
             its glory expressing renewal and life. Green has a strong
@@ -91,7 +103,10 @@ export default function App() {
       </View>
       <View style={[styles.outer, { backgroundColor: "violet" }]}>
         <View style={styles.textBlock}>
-          <Text style={styles.title}>VIOLET</Text>
+          <View style={styles.heading}>
+              <Text style={styles.title}>PURPLE</Text>
+              <Text style={styles.category}>SECONDARY</Text>
+          </View>
           <Text style={[styles.desc, { color: "white" }]}>
             The color of spirituality. The energy of red with the calm of blue
             combine to create violet, a color that inspires reflection and self
@@ -135,6 +150,14 @@ export default function App() {
             powerful color, black is formal and sophisticated, sexy and
             secretive. It is the color of things that are scary and evil. Black
             conveys pessimism and a lack of hope.
+          </Text>
+        </View>
+      </View>
+      <View style={[styles.outer, { backgroundColor: "white" }]}>
+        <View style={styles.textBlock}>
+          <Text style={[styles.title, { color: "black" }]}>WHITE</Text>
+          <Text style={[styles.desc, { color: "black" }]}>
+            White is at the opposite end of the spectrum from black, but like black, it can work well with just about any other color. White is often associated with purity, cleanliness, and virtue. In the West, white is commonly worn by brides on their wedding day. It’s also associated with the healthcare industry.
           </Text>
         </View>
       </View>
@@ -196,4 +219,7 @@ const styles = StyleSheet.create({
   textWhite: {
     color: "white",
   },
+  category: { color: "white", marginLeft: 3, opacity: 0.4, 
+    filter: "invert(100%)"},
+  heading :{ flex: 1, flexDirection: "row", alignItems: "center"},
 });
