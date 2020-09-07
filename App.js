@@ -1,19 +1,24 @@
-import React, { Component, useState } from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from "react-native";
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Dimensions,
+} from "react-native";
 
 export default function App() {
-  const [text, setText] = useState("");
   return (
     <ScrollView horizontal={true} pagingEnabled={true} style={styles.container}>
-      <View style={[styles.outer, styles.white]}>
+      <View style={[styles.outer, styles.branding]}>
         <Text style={styles.logo}>Colors</Text>
         <Text style={styles.slogan}>The True meaning</Text>
-        <Text>----</Text>
+        <Text style={styles.watermark}>created by NATIVE</Text>
       </View>
-      <View style={[styles.outer, styles.red]}>
+      <View style={[styles.outer, { backgroundColor: "red" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>RED</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of passion and drama. This color attracts the most
             attention and is associated with strong emotions such as love and
             anger. Red is the color used universally to signify danger, courage,
@@ -23,10 +28,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.orange]}>
+      <View style={[styles.outer, { backgroundColor: "orange" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>ORANGE</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of encouragement. The combination of yellow and red makes
             orange convey excitement, warmth and enthusiasm. Social and
             inviting, this is the color of the extrovert, exuding happiness and
@@ -36,7 +41,7 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.yellow]}>
+      <View style={[styles.outer, { backgroundColor: "yellow" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>YELLOW</Text>
           <Text style={styles.desc}>
@@ -49,7 +54,7 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.pink]}>
+      <View style={[styles.outer, { backgroundColor: "pink" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>PINK</Text>
           <Text style={styles.desc}>
@@ -60,10 +65,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.blue]}>
+      <View style={[styles.outer, { backgroundColor: "blue" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>BLUE</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of trust. Blue, the shade of the sea and the sky, is
             thought to induce calm and convey tranquillity, serenity and peace.
             The popular color instils confidence and inspires feelings of trust,
@@ -72,10 +77,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.green]}>
+      <View style={[styles.outer, { backgroundColor: "green" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>GREEN</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of growth and health. Think of nature and see green in all
             its glory expressing renewal and life. Green has a strong
             association as a refreshing and peaceful color. It evokes feeling of
@@ -84,10 +89,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.violet]}>
+      <View style={[styles.outer, { backgroundColor: "violet" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>VIOLET</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of spirituality. The energy of red with the calm of blue
             combine to create violet, a color that inspires reflection and self
             awareness. It is the color of the sensitive, compassionate intuitive
@@ -96,10 +101,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.brown]}>
+      <View style={[styles.outer, { backgroundColor: "brown" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>BROWN</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of the earth. Stability and a solid foundation is the
             message that emanates from the color brown. This color relates to
             things that are natural and simple. Brown is thought to be dull, but
@@ -108,10 +113,10 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.gray]}>
+      <View style={[styles.outer, { backgroundColor: "gray" }]}>
         <View style={styles.textBlock}>
           <Text style={styles.title}>GRAY</Text>
-          <Text style={styles.desc}>
+          <Text style={[styles.desc, { color: "white" }]}>
             The color of compromise. Grey is considered to be an unemotional,
             detatched color seeking to avoid attention. It conveys gloom and
             depression. Very conservative, grey has a stabilizing effect as it
@@ -121,7 +126,7 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.black]}>
+      <View style={[styles.outer, { backgroundColor: "black" }]}>
         <View style={styles.textBlock}>
           <Text style={[styles.title, styles.textWhite]}>BLACK</Text>
           <Text style={[styles.desc, styles.textWhite]}>
@@ -133,16 +138,14 @@ export default function App() {
           </Text>
         </View>
       </View>
-      <View style={[styles.outer, styles.white]}>
+      <View style={[styles.outer, styles.branding]}>
         <Text style={styles.logo}>Colors</Text>
         <Text style={styles.slogan}>Thanks for watching!</Text>
-        <Text>created by NATIVE</Text>
+        <Text style={styles.watermark}>created by NATIVE</Text>
       </View>
     </ScrollView>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {},
@@ -152,10 +155,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
+    height: Dimensions.get("window").height, 
+  },
+  branding: {
+    backgroundColor: "white",
+    marginTop: Dimensions.get("window").height / 20,
+  },
+  watermark: {
+    bottom: 10,
+    left: "auto",
+    right: "auto",
+    width: "100%",
+    textAlign: "center",
+    opacity: 0.5,
+    fontFamily: "Roboto",
+    marginTop: Dimensions.get("window").height / 20,
   },
   textBlock: {
-    width: Dimensions.get('window').width - 50,
+    width: Dimensions.get("window").width - 50,
   },
   title: {
     color: "#fff",
@@ -163,52 +180,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   desc: {
-    color: "#fff",
     fontSize: 25,
   },
   logo: {
-    color: 'red',
-    fontWeight: 'bold',
+    justifyContent: "center",
+    textAlign: "center",
+    color: "red",
+    fontWeight: "bold",
     fontSize: 50,
-  },  
+  },
   slogan: {
+    textAlign: "center",
     fontSize: 15,
   },
   textWhite: {
-    color: 'white',
+    color: "white",
   },
-  white: {
-    backgroundColor: 'white',
-  },
-  red: {
-    backgroundColor: "red",
-  },
-  orange: {
-    backgroundColor: '#F9A602',
-  },
-  yellow: {
-    backgroundColor: 'yellow',
-  },
-  pink: {
-    backgroundColor: 'pink',
-  },
-  blue: {
-    backgroundColor: 'blue',
-  },
-  green: {
-    backgroundColor: "green",
-  },
-  violet: {
-    backgroundColor: 'violet',
-  },
-  brown: {
-    backgroundColor: 'brown',
-  },
-  gray: {
-    backgroundColor: 'gray',
-  },
-  black: {
-    backgroundColor: 'black',
-  },
-
 });
