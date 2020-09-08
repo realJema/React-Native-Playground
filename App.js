@@ -220,6 +220,6 @@ const styles = StyleSheet.create({
     color: "white",
   },
   category: { color: "white", marginLeft: 3, opacity: 0.4, 
-    filter: "invert(100%)"},
-  heading :{ flex: 1, flexDirection: "row", alignItems: "center"},
+  },
+  heading :{ flex: 1, flexDirection: "row", alignItems: "center", paddingBottom: 30},
 });

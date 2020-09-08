@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "play",
-    "slug": "play",
+    "name": "Colors",
+    "slug": "colors",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "description": "Explore the true meaning of colors",
+    "android": {
+      "package": "com.realjema.colors"
     }
   }
 }
