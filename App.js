@@ -25,9 +25,9 @@ export default function App() {
             The color of passion and drama. This color attracts the most
             attention and is associated with strong emotions such as love and
             anger. Red is the color used universally to signify danger, courage,
-            strengh and power. Red is stimulating, vibrat and exciting. Red
+            strength and power. Red is stimulating, vibrate and exciting. Red
             inspires desire with a strong link to sexuality and increased
-            appetities.
+            appetites.
           </Text>
         </View>
       </View>
@@ -133,7 +133,7 @@ export default function App() {
           <Text style={styles.title}>GRAY</Text>
           <Text style={[styles.desc, { color: "white" }]}>
             The color of compromise. Grey is considered to be an unemotional,
-            detatched color seeking to avoid attention. It conveys gloom and
+            detached color seeking to avoid attention. It conveys gloom and
             depression. Very conservative, grey has a stabilizing effect as it
             is very neutral, but can also conjure up feelings of frustration.
             Grey is linked with maturity and protection, being reliable and
