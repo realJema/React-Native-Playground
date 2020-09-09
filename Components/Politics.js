@@ -25,7 +25,7 @@ export default class Politics extends Component {
     try {
       //Assign the promise unresolved first then get the data using the json method.
       const news = await fetch(
-        "http://127.0.0.1:5000/native/api/news/filter",
+        "https://native-news-app.herokuapp.com/native/api/news/filter",
         {
           method: "POST",
           mode: "cors",
@@ -57,7 +57,7 @@ export default class Politics extends Component {
             Politics is a multifaceted word. It may be used positively in the
             context of a "political solution" which is compromising and
             non-violent,or descriptively as "the art or science of
-            government", but also often carries a negative connotatio
+            government", but also often carries a negative connotation
           </Text>
         </View>
         <ScrollView>

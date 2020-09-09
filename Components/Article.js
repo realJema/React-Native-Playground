@@ -21,7 +21,7 @@ export default class World extends Component {
   async componentDidMount() {
     try {
       const article = await fetch(
-        "http://127.0.0.1:5000/native/api/news/article",
+        "https://native-news-app.herokuapp.com/native/api/news/article",
         {
           method: "POST",
           mode: "cors",

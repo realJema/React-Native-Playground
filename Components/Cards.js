@@ -11,7 +11,7 @@ import { Actions } from "react-native-router-flux";
 
 export default class Cards extends Component {
    goToAbout(articleID){
-     console.log('loading article - ', articleID);
+    //  console.log('loading article - ', articleID);
     Actions.article({articleID: articleID});
   };
   render() {
